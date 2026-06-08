@@ -6,9 +6,21 @@ function Navbar () {
       <h1>Odin Shop Cart</h1>
 
       <div>
-        <Navlink to='/'>Home</Navlink>
-        <Navlink to='/shop'>Shop</Navlink> 
-        <Navlink to='/cart'>Cart</Navlink>
+        <NavLink to='/' className={
+            ({isActive}) => isActive ? 'font-bold' : ''
+        }>
+        Home
+        </NavLink>
+        <NavLink to='/shop' className={
+            ({isActive}) => isActive ? 'font-bold' : ''
+        }>
+        Shop
+        </NavLink> 
+        <NavLink to='/cart' className={
+            ({isActive}) => isActive ? 'font-bold' : ''
+        }>
+        Cart
+        </NavLink>
       </div>
     </nav>
   )
