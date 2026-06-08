@@ -1,8 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import {CartContext} from "../context/CartContext.jsx";
 
 const NavLinkClass = ({isActive}) => isActive ? 'font-bold' : '';
 
 function Navbar () {
+    const {cart} = useContext(CartContext);
+    console.log(cart);
   return (
     <nav>
       <h1>Odin Shop Cart</h1>
