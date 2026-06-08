@@ -6,7 +6,6 @@ function Navbar () {
   return (
     <nav>
       <h1>Odin Shop Cart</h1>
-
       <div>
         <NavLink to='/' className={NavLinkClass}>
         Home
