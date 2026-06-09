@@ -6,7 +6,10 @@ const NavLinkClass = ({isActive}) => isActive ? 'font-bold' : '';
 
 function Navbar () {
     const {cart} = useContext(CartContext);
-    console.log(cart);
+
+    const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
+    // console.log(cart);
+    
   return (
     <nav>
       <h1>Odin Shop Cart</h1>
@@ -18,7 +21,7 @@ function Navbar () {
         Shop
         </NavLink> 
         <NavLink to='/cart' className={NavLinkClass}>
-        Cart
+        Cart ({totalItems})
         </NavLink>
       </div>
     </nav>
