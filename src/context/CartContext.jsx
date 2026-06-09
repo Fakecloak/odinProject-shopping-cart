@@ -10,7 +10,7 @@ function CartProvider ({children}) {
 
         const existingProduct = cart.find(item => item.id === product.id);
 
-        if(exisitingProduct){
+        if(existingProduct){
             setCart(cart.map(item => product.id === item.id ? {...item, quantity: item.quantity + product.quantity}  : item ));
 
         }else{
@@ -19,7 +19,7 @@ function CartProvider ({children}) {
 
     }
     return (
-        <CartContext.Provider value = { {cart, setCart} }> 
+        <CartContext.Provider value = { {cart, addToCart} }> 
         {children}
         </CartContext.Provider>
     )

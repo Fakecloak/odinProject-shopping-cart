@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import {CartContext} from "../context/CartContext.jsx";
+import { CartContext } from "../context/CartContext.jsx";
 
 const NavLinkClass = ({isActive}) => isActive ? 'font-bold' : '';
 
