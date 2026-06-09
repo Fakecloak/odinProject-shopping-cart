@@ -1,8 +1,9 @@
 import useProducts from "../hooks/useProducts.js";
+import ProductCard from "../components/ProductCard.jsx";
 
 function Shop() {
   const { products, error, isLoading } = useProducts();
-  // console.log(products);
+  console.log(products);
 
   if(isLoading) return <h1> Loading Store...</h1>;
 
@@ -13,10 +14,11 @@ function Shop() {
       <h1>Shop</h1>
 
       {products.map(product => (
-        <h1 key={product.id}>
-          {product.title}
-        </h1>)
-      )}
+        <ProductCard 
+          key={product.id}
+          product={product}
+        />
+      ))}
     </div>
   );
 }
