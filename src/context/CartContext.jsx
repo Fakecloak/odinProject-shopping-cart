@@ -16,14 +16,34 @@ function CartProvider ({children}) {
         }else{
             setCart([...cart, product]);
         }
+    };
 
-    }
+    function removeFromCart(id){
+        setCart(
+            cart.filter(item => item.id !== id)
+        );
+    };
+
+    function incrementQty(id){
+        setCart(
+            cart.map(item =>
+            item.id === id ? {...item, quantity: item.quantity + 1 } : item
+        ));
+    };
+
+    function decrementQty(id){
+        setCart(
+            cart.map(item =>
+            item.id === id ? {...item, quantity: Math.max(1,item.quantity - 1) } : item
+        ));
+    };
+
     return (
-        <CartContext.Provider value = { {cart, addToCart} }> 
+        <CartContext.Provider value = { {cart, addToCart, removeFromCart, incrementQty, decrementQty} }> 
         {children}
         </CartContext.Provider>
     )
 
-}
+};
 
 export default CartProvider;
