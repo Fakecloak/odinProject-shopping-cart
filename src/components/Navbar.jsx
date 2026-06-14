@@ -11,10 +11,10 @@ function Navbar () {
     // console.log(cart);
     
   return (
-    <nav className=" bg-white p-5 border-b-2">
-      <div className="flex flex-row justify-between items-center">
+    <nav className=" bg-white p-5 border md:border-b-2">
+      <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
         <NavLink to='/'>
-          <div className="flex flex-row gap-1 items-center">
+          <div className="flex flex-row gap-4 items-center">
             <svg className="w-10 h-10 cursor-pointer" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
 
                   <circle cx="117.33" cy="9.69" r="5.69" fill="#f44336">
@@ -122,7 +122,7 @@ function Navbar () {
                   </g>
 
             </svg>
-            <h1 className="font-bold text-4xl text-green-600 cursor-pointer">Odin Shopping Cart</h1>
+            <h1 className="font-bold text-2xl md:text-4xl text-green-600 cursor-pointer">Odin Shopping Cart</h1>
           </div>
         </NavLink>
         <div className="flex gap-4 items-center text-gray-500">
