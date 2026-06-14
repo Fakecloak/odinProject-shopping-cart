@@ -25,7 +25,8 @@ function CartItem({item}) {
             </div>
             <h2>{item.title}</h2>
             <p>Qty: {item.quantity}</p>
-            <p>$ {item.price.toFixed(2)}</p>
+            <p>Price: $ {item.price.toFixed(2)}</p>
+            <p>Subtotal: $ {(item.quantity*item.price).toFixed(2)}</p>
             <div className="quantity-controls">
                 <button
                 onClick={handleDecrease}
