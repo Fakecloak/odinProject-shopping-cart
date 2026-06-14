@@ -8,10 +8,10 @@ function CartSummary({cart}) {
     return(
         <div>
             {cart.length === 0 ? 
-                (<div className="mx-auto my-40 gap-10 flex flex-col justify-center font-bold text-4xl items-center">
+                (<div className="mx-auto my-40 gap-10 flex flex-col justify-center font-bold text-2xl md:text-4xl items-center">
                 <h1 className="">Your Cart is Empty</h1>
                 <NavLink to='/shop'>
-                    <button className="flex px-6 py-5 font-medium bg-indigo-600 hover:bg-indigo-400 hover:shadow-2xl text-white rounded-full">Go Shopping</button>
+                    <button className="flex p-3 md:px-6 md:py-5 font-medium bg-indigo-600 hover:bg-indigo-400 hover:shadow-2xl text-white rounded-full">Go Shopping</button>
                 </NavLink>
                 </div>) //if cart empty
                 : 

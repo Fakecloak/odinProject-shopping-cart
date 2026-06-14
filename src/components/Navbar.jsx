@@ -11,8 +11,8 @@ function Navbar () {
     // console.log(cart);
     
   return (
-    <nav className=" bg-white p-5 border md:border-b-2">
-      <div className="flex flex-col md:flex-row gap-4 justify-between items-center">
+    <nav className=" bg-gray-100 p-5 border-b md:border-b-2">
+      <div className="flex flex-col md:flex-row gap-4 justify-between font-medium items-center">
         <NavLink to='/'>
           <div className="flex flex-row gap-4 items-center">
             <svg className="w-10 h-10 cursor-pointer" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
