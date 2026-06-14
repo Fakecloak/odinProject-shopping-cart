@@ -11,18 +11,20 @@ function Navbar () {
     // console.log(cart);
     
   return (
-    <nav>
-      <h1>Odin Shop Cart</h1>
-      <div>
-        <NavLink to='/' className={NavLinkClass}>
-        Home
-        </NavLink>
-        <NavLink to='/shop' className={NavLinkClass}>
-        Shop
-        </NavLink> 
-        <NavLink to='/cart' className={NavLinkClass}>
-        Cart ({totalItems})
-        </NavLink>
+    <nav className="flex flex-row bg-red-200">
+      <div className="">
+        <h1>Odin Shop Cart</h1>
+        <div>
+          <NavLink to='/' className={NavLinkClass}>
+          Home
+          </NavLink>
+          <NavLink to='/shop' className={NavLinkClass}>
+          Shop
+          </NavLink> 
+          <NavLink to='/cart' className={NavLinkClass}>
+          Cart ({totalItems})
+          </NavLink>
+        </div>
       </div>
     </nav>
   )
