@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext.jsx";
+import { useNavigate } from "react-router-dom";
 
-const NavLinkClass = ({isActive}) => isActive ? 'font-bold text-green-500' : '';
+const NavLinkClass = ({isActive}) => isActive ? 'font-bold text-white bg-green-500 p-3 rounded-full' : '';
 
 function Navbar () {
     const {cart} = useContext(CartContext);
+    const navigate = useNavigate();
 
     const totalItems = cart.reduce((total, product) => total + product.quantity, 0);
     // console.log(cart);
@@ -14,7 +16,7 @@ function Navbar () {
     <nav className=" bg-white p-5 border-b-2">
       <div className="flex flex-row justify-between items-center">
         <div className="flex flex-row gap-1 items-center">
-          <svg className="w-10 h-10" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
+          <svg className="w-10 h-10 cursor-pointer" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet">
 
                 <circle cx="117.33" cy="9.69" r="5.69" fill="#f44336">
 
@@ -121,9 +123,9 @@ function Navbar () {
                 </g>
 
           </svg>
-          <h1 className="font-bold text-2xl text-green-600">Odin Shopping Cart</h1>
+          <h1 className="font-bold text-4xl text-green-600 cursor-pointer" onClick={()=> navigate('/shop')} >Odin Shopping Cart</h1>
         </div>
-        <div className="flex gap-4 text-gray-500">
+        <div className="flex gap-4 items-center text-gray-500">
           <NavLink to='/' className={NavLinkClass}>
           Home
           </NavLink>
