@@ -8,10 +8,9 @@ function Cart() {
   // console.log(cart) 
 
   return (
-    <div className="cart">
-      <h1>Cart</h1>
+    <div className="p-10 mx-auto">
 
-      <div>
+      <div className="flex flex-col gap-3 items-center justify-center">
         {cart.map(item => (
           <CartItem 
           key={item.id}
@@ -20,7 +19,7 @@ function Cart() {
         ))}
       </div>
 
-      <div>
+      <div className="">
         <CartSummary
         cart={cart}
         />
