@@ -45,6 +45,7 @@ function Home() {
             className="w-full h-screen object-cover"
           />
         </div>
+        
       </div>
     </>
   );
