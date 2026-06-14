@@ -12,7 +12,7 @@ function Home() {
     <>
       <div className="relative mx-auto p-3 bg-white">
 
-        <div className="mx-3 absolute top-[30%] md:inset-0 flex flex-col items-center justify-center z-10">
+        <div className="mx-10 absolute top-[30%] md:inset-0 flex flex-col items-center justify-center z-10">
           <div className="bg-black/30 backdrop-blur p-8 rounded-xl text-center">
             <h1 className=" text-2xl md:text-5xl font-bold text-white mb-6">
               Discover Our Collection
