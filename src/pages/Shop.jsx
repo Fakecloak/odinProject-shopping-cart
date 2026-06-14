@@ -5,9 +5,9 @@ function Shop() {
   const { products, error, isLoading } = useProducts();
   console.log(products);
 
-  if(isLoading) return <h1> Loading Store...</h1>;
+  if(isLoading) return <h1 className="mx-auto mt-10 text-2xl md:text-5xl flex justify-center font-medium items-center"> Loading Store...</h1>;
 
-  if(error) return <h1> Something went wrong</h1>;
+  if(error) return <h1 className="mx-auto mt-10 text-red-600 text-2xl md:text-5xl flex justify-center font-medium items-center"> Something went wrong</h1>;
 
   return (
     <div className="shop">
