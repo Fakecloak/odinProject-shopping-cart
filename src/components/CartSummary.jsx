@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+
 function CartSummary({cart}) {
     const totalPrice = cart.reduce(
         (total, item) => total + item.price * item.quantity, 0 
@@ -14,8 +15,13 @@ function CartSummary({cart}) {
                 </NavLink>
                 </div>) //if cart empty
                 : 
-                (<div className="flex justify-center font-bold text-2xl">
-                    <h2><span className="text-gray-600">Cart Total: </span>${totalPrice.toFixed(2)}</h2>
+                (<div className="mx-auto bg-gray-100 border border-dashed rounded-xl p-8 mt-3 w-full md:w-1/2">
+                    <div className="flex flex-col items-end gap-4">
+                        <h2 className="text-2xl md:text-4xl font-bold text-gray-600">Cart Total: <span className="text-orange-500">${totalPrice.toFixed(2)}</span></h2>
+                        <button className="px-8 py-3 bg-green-600 text-white rounded-md hover:shadow-2xl">
+                            Proceed to Checkout
+                        </button>
+                    </div>
                  </div>) //if cart not empty
             }
       </div>

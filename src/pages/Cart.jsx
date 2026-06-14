@@ -19,7 +19,7 @@ function Cart() {
         ))}
       </div>
 
-      <div className="">
+      <div>
         <CartSummary
         cart={cart}
         />
