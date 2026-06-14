@@ -11,14 +11,15 @@ function Shop() {
 
   return (
     <div className="shop">
-      <h1>Shop</h1>
-
+        <h2 className=" text-2xl md:text-4xl font-bold p-5 flex justify-center mb-5">Our Products</h2>
+      <div className="grid md:grid-cols-4 gap-3">
       {products.map(product => (
         <ProductCard 
           key={product.id}
           product={product}
         />
       ))}
+      </div>
     </div>
   );
 }
