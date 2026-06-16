@@ -5,10 +5,17 @@ import {CartContext} from "../context/CartContext.jsx";
 function ProductCard( {product} ) {
     const [quantity, setQuantity] = useState(1);
     const {addToCart} = useContext(CartContext);
+    const [added, setAdded] = useState(false);
 
     function handleAddToCart() {
         addToCart({...product, quantity});
         setQuantity(1);
+
+        setAdded(true);
+
+        setTimeout( ()=>{
+            setAdded(false);
+        },2000);
     }
 
     return (
@@ -42,9 +49,9 @@ function ProductCard( {product} ) {
             </div>
 
             <button 
-                className="py-2 px-4  rounded-lg bg-blue-500 text-white text-md mt-auto hover:shadow-2xl"
+                className={`py-2 px-4  rounded-lg text-white text-md mt-auto transition-colors hover:shadow-2xl ${added ? "bg-green-500" : "bg-blue-500" }`}
                 onClick={handleAddToCart}>
-                    Add to Cart
+                    {added ? "Added to Cart" : "Add to Cart" }
             </button>
             
         </div>
