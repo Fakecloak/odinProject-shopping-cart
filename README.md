@@ -103,7 +103,7 @@ This project helped reinforce:
 
 ## Live Demo
 
-Add your deployed application link here.
+https://shopping-cart-fakecloak.vercel.app/
 
 ## Acknowledgements
 
